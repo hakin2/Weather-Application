@@ -1,13 +1,148 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Improved body styling */
+.bodyy{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* A light grey background */
+  color: #333;
+  gap:10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Title{
+  position: relative;
+  z-index: 1; /* Changed from -1 to 1 */
+  border: 1px solid #ddd; /* Softer border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 40px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 375px; /* Fixed width, can be adjusted or made responsive */
+  width: 100%; /* Responsive width */
+}
+
+.currentWeather{
+  border: 1px solid #ddd; /* Softer border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 30px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 300px; /* Fixed width, can be adjusted or made responsive */
+  width: 100%; /* Responsive width */
+  flex: 0 0 300px
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #ddd; /* Softer border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 30px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 300px; 
+  width: 100%; 
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd; /* Softer line color */
+}
+
+
+
+input[type="text"] {
+  border: 1px solid #750808; /* Softer border */
+  padding: 8px;
+  margin-top: 4px; /* Space between label and input */
+  border-radius: 4px; /* Rounded corners for the input fields */
+}
+
+input[type="text"]:focus {
+  border-color: #aaa; /* Highlight color when focused */
+  outline: none; /* Remove default focus outline */
+}
+
+label {
+  display: block; /* Ensure the label is on a new line */
+  margin-bottom: .5rem; /* Space between the label and the next element */
+}
+
+@media (max-width: 768px) {
+  .currentWeather,
+  table {
+    width: 90%; /* Full width on smaller screens */
+    margin: 20px auto; /* Centering */
+  }
+
+  input[type="text"] {
+    width: calc(100% - 16px); /* Full width minus padding */
+  }
+
+
+}
+
+
+.earth-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Changed from -1 to 0 */
+  overflow: hidden;
+
+}
+
+.earth-background video {
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+
+}
+
+
+.content {
+  position: relative;
+  z-index: 1; 
+  display: flex; /* Set display to flex to use flexbox */
+  justify-content: start; /* Center children horizontally */
+  align-items: start; /* Align items to the start of the vertical axis */
+
+  flex-wrap: nowrap; /* Allow items to wrap on smaller screens */
+  gap: 10px; /* Add some space between flex items */
+  max-width: 1500px; /* Set a max-width for the content area */
+  margin: 75px auto;
+ 
+}
+
+
+.content2 {
+  border: 1px solid #ddd; /* Softer border color */
+  border-radius: 8px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 30px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  max-width: 30px; /* Fixed width, can be adjusted or made responsive */
+  width: 10%; /* Responsive width */
+  z-index: 1; /* Changed from -1 to 1 */
+  display: flex; /* Set display to flex to use flexbox */
+  justify-content: center; /* Center children horizontally */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  gap: 10px; /* Add some space between flex items */
+  max-width: 1200px; 
+  margin: 10px;
+}
+
+.content3 {
+  flex: 1;
 }
